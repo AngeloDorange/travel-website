@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel agency</title>
+    <link rel="shortcut icon" href="img/Pelfusion-Folded-Flat-Air-Plane.512.png.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/flipdown.css">
+    <link rel="stylesheet" href="css/flipdown.min.css">
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/flipdown.js"></script>
+    <script src="js/flipdown.min.js"></script>
+    
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-----------------------------------NAVBAR SETION----------------------------------->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><span>i</span>TRAVEL</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Vacations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">All Destinations<i class="fa-solid fa-plane-departure"></i></a></li>
+              <li><a onclick="show()" class="dropdown-item" href="#">Take a look<i class="fa-solid fa-video"></i></a></li>
+              <li><a class="dropdown-item" href="#">platine Plan<i class="fa-solid fa-wallet"></i></a></li>
+              <li><a class="dropdown-item" href="#">Golg Plan<i class="fa-solid fa-wallet"></i></a></li>
+              <li><a class="dropdown-item" href="#">Silver Plan<i class="fa-solid fa-wallet"></i></a></li>
+              <li><a class="dropdown-item" href="#">Basic Plan<i class="fa-solid fa-wallet"></i></a></li>
+              <li><a class="dropdown-item" href="#">All Plans<i class="fa-solid fa-magnifying-glass"></i></a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Flights</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Hotel</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Car</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-----------------------------------HERO SETION----------------------------------->
+    <section class="hero" style="background: linear-gradient(to right, rgba(255,62,28,0.5), rgba(255,140,0,0.5)), url(img/pexels-francesco-ungaro-2325446.jpg);">
+      <div class="container-fluid">
+        <div class="ro">
+
+          <div class="content-hero">
+            <div class="col-12 col-md-5 left wow fadeInUp" data-wow-delay="1s">
+
+              <div class="btnForm">
+                <a class="active" href="#">Flights</a>
+                <a href="#">Hotels</a>
+                <a href="#">Packages</a> 
+              </div>
+
+              <form class="row g-3">
+                <div class="col-md-6 input">
+                  <label for="inputEmail4" class="form-label">From:</label>
+                  <input type="text" class="form-control" id="inputEmail4" placeholder="Johor, Singapore">
+                </div>
+                <div class="col-md-6 input">
+                  <label for="inputPassword4" class="form-label">To:</label>
+                  <input type="text" class="form-control" id="inputPassword4" placeholder="Jacmel, Haiti">
+                </div>
+                <div class="col-md-6 input">
+                  <label for="inputEmail4" class="form-label">Check In:</label>
+                  <input type="date" class="form-control" id="inputEmail4" placeholder="Singapore">
+                </div>
+                <div class="col-md-6 input">
+                  <label for="inputPassword4" class="form-label">Check Out:</label>
+                  <input type="date" class="form-control" id="inputPassword4" placeholder="Jacmel">
+                </div>
+                <div class="col-md-12 input">
+                  <label for="inputState" class="form-label">Class:</label>
+                  <select id="inputState" class="form-select" id="selectBox">
+                    <option selected>Economy</option>
+                    <option value="Business">Business</option>
+                    <option value="First">Gold</option>
+                    <option value="Platine">Platine</option>
+                  </select>
+                </div>
+                <div class="col-md-6 input">
+                  <label for="inputState" class="form-label">Adult:</label>
+                  <select id="inputState" class="form-select">
+                    <option selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+                <div class="col-md-6 input">
+                  <label for="inputState" class="form-label">Children</label>
+                  <select id="inputState" class="form-select">
+                    <option selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+                <div class="col-12 btn-form">
+                  <button type="submit">Search Flight</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-7 right wow fadeInUp" data-wow-delay="1.3s">
+              <div class="content">
+                <h2>Exclusive Limited Time Offer</h2>
+                <p>Fly to Cap-Haitien via Mahajanga, Madagascar</p>
+                <h1>$699</h1>
+
+                
+                <div class="timer">
+                  <div id="flipdown" class="flipdown"></div>
+                </div>
+                  
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+  
+    <!--AD SECTION-->
+    <div class="ad-container" id="adImg">
+      <div class="ad-background"></div>
+      <div class="ad-content">
+        <img src="img/ad.jpg" alt="Your ad image">
+
+        <div class="text-content">
+
+          <div class="body-text">
+            <h2>Exclusive Limited Time Offer</h2>
+            <p>Fly to Cap-Haitien via Mahajanga, Madagascar</p>
+            <h1>$699</h1>
+          </div>
+          
+          <!--<div class="timerA">
+            <p id="time"></p>
+          </div>-->
+          <div class="timerA">
+            <div class="time-box">
+              <span class="days" id="days">0</span>
+              <span class="label">Days</span>
+            </div>
+            <div class="time-box">
+              <span class="hours" id="hours">0</span>
+              <span class="label">Hours</span>
+            </div>
+            <div class="time-box">
+              <span class="minutes" id="minutes">0</span>
+              <span class="label">Minutes</span>
+            </div>
+            <div class="time-box">
+              <span class="seconds" id="seconds">0</span>
+              <span class="label">Seconds</span>
+            </div>
+          </div>
+          
+
+        </div>
+
+        <button onclick="closeAd()" class="ad-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+    <!--AD SECTION-->
+    
+
+    <!-----------------------------------TOURS SETION----------------------------------->
+    <section class="tours">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="title">
+            <h1>Hot Tours</h1>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and <br> Consonantia, there live the blind texts.</p>
+          </div>
+
+          <div class="content-tour">
+            <div class="card-group">
+              <div class="card wow fadeInUp" data-wow-delay=".1s">
+                <img src="img/usa-1777986_1280.jpg" class="card-img-top" alt="...">
+                <div class="overlay"></div>
+                <div class="card-body">
+                  <h1 class="card-title">New York</h1>
+                  <p class="card-text">3 nights + Flight 5*Hotel</p>
+                  <h1 class="card-text second">$1000</h1>
+                  <div class="btn-card">
+                    <a href="#">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card wow fadeInUp" data-wow-delay=".15s">
+                <img src="img/tour-2.jpg" class="card-img-top" alt="...">
+                <div class="overlay"></div>
+                <div class="card-body">
+                  <h1 class="card-title">Philippines</h1>
+                  <p class="card-text">4 nights + Flight 5*Hotel</p>
+                  <h1 class="card-text second">$1000</h1>
+                  <div class="btn-card">
+                    <a href="#">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card wow fadeInUp" data-wow-delay=".2s">
+                <img src="img/tour-3.jpg" class="card-img-top" alt="...">
+                <div class="overlay"></div>
+                <div class="card-body">
+                  <h1 class="card-title">Hongkong</h1>
+                  <p class="card-text">2 nights + Flight 4*Hotel</p>
+                  <h1 class="card-text second">$1000</h1>
+                  <div class="btn-card">
+                    <a href="#">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-tour">
+              <a href="#">See All Offer <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-----------------------------------PLANS SETION----------------------------------->
+    <section class="plans">
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 bottom">
+              <div class="card wow fadeInUp" data-wow-delay=".1s">
+                <div class="card-body">
+                  <div class="icons">
+                    <i class="fa-solid fa-umbrella-beach"></i>
+                  </div>
+                  <div class="text">
+                    <h5 class="card-title">Family Travel</h5>
+                    <p class="card-text">Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 bottom">
+              <div class="card wow fadeInUp" data-wow-delay=".15s">
+                <div class="card-body">
+                  <div class="icons">
+                    <i class="fa-sharp fa-solid fa-sailboat"></i>
+                  </div>
+                  <div class="text">
+                    <h5 class="card-title">Travel Plans</h5>
+                    <p class="card-text">Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit</p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 bottom">
+              <div class="card wow fadeInUp" data-wow-delay=".2s">
+                <div class="card-body">
+                  <div class="icons">
+                    <i class="fa-sharp fa-solid fa-heart"></i>
+                  </div>
+                  <div class="text">
+                    <h5 class="card-title">Honeymoon</h5>
+                    <p class="card-text">Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card wow fadeInUp" data-wow-delay=".1s">
+                <div class="card-body">
+                  <div class="icons">
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                  </div>
+                  <div class="text">
+                    <h5 class="card-title">Business Travel</h5>
+                    <p class="card-text">Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card wow fadeInUp" data-wow-delay=".15s">
+                <div class="card-body">
+                  <div class="icons">
+                    <i class="fa-solid fa-martini-glass-citrus"></i>
+                  </div>
+                  <div class="text">
+                    <h5 class="card-title">Solo Travel</h5>
+                    <p class="card-text">Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card wow fadeInUp" data-wow-delay=".2s">
+                <div class="card-body">
+                  <div class="icons">
+                    <i class="fa-solid fa-car"></i>
+                  </div>
+                  <div class="text">
+                    <h5 class="card-title">Explorer</h5>
+                    <p class="card-text">Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-----------------------------------PLACE GALLERY SECTION----------------------------------->
+    <section class="gallery">
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="card-group">
+            <div class="card wow fadeInUp" data-wow-delay=".1s">
+              <div class="demo">
+                <img src="img/gal-1.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">Los Angeles</h5>
+              </div>
+            </div>
+            <div class="card wow fadeInUp" data-wow-delay=".15s">
+              <div class="demo">
+                <img src="img/gal-2.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">HongKong</h5>
+              </div>
+            </div>
+            <div class="card wow fadeInUp" data-wow-delay=".2s">
+              <div class="demo">
+                <img src="img/gal-3.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">Italy</h5>
+              </div>
+            </div>
+            <div class="card wow fadeInUp" data-wow-delay=".25s">
+              <div class="demo">
+                <img src="img/gal-4.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">Phillipines</h5>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card-group">
+            <div class="card wow fadeInUp" data-wow-delay=".1s">
+              <div class="demo">
+                <img src="img/gal-5.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">Japan</h5>
+              </div>
+            </div>
+            
+            <div class="card wow fadeInUp" data-wow-delay=".2s">
+              <div class="demo">
+                <img src="img/hero.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">Belgium</h5>
+              </div>
+            </div>
+            <div class="card wow fadeInUp" data-wow-delay=".2s">
+              <div class="demo">
+                <img src="img/pexels-francesco-ungaro-2325446.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">New Zealand</h5>
+              </div>
+            </div>
+            <div class="card wow fadeInUp" data-wow-delay=".2s">
+              <div class="demo">
+                <img src="img/gal-6.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">Paris</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div class="card wow fadeInUp" data-wow-delay=".1s">
+              <div class="demo">
+                <img src="img/gal-7.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">Singapore</h5>
+              </div>
+            </div>
+            <div class="card wow fadeInUp" data-wow-delay=".15s">
+              <div class="demo">
+                <img src="img/gal-8.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">Madagascar</h5>
+              </div>
+            </div>
+            <div class="card wow fadeInUp" data-wow-delay=".2s">
+              <div class="demo">
+                <img src="img/gal-9.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">Egypt</h5>
+              </div>
+            </div>
+            <div class="card  wow fadeInUp" data-wow-delay=".25s">
+              <div class="demo">
+                <img src="img/gal-10.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title">Indonesia</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_video">
+            <div id="video_show">
+            
+              <video id="myVideo" autoplay muted loop>
+                    <source src="video/NataciÃ³n - 10835.mp4" type="video/mp4">
+              </video>
+    
+              <div class="btn_hide">
+                    <button onclick="hide()"><i class="fa-solid fa-xmark"></i></button>
+              </div>
+                
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-----------------------------------BLOG SETION----------------------------------->
+    <section class="blog">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="title">
+            <h1>Recent From Blog</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, <br> perspiciatis accusamus asperiores sint consequuntur debitis</p>
+          </div>
+
+          <div class="blog-content">
+            <div class="card-group">
+              <div class="col-lg-4 card wow fadeInUp" data-wow-delay=".1s">
+                <img src="img/usa-1777986_1280.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">30% Discount to Travel All Around the World</h5>
+                  <div class="date">
+                    <p>Sep. 15th</p>
+                    <p>21 <i class="fa-solid fa-comment"></i></p>
+                  </div>
+                  <p class="card-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  <a href="#">Learn More...</a>
+                </div>
+              </div>
+              <div class="col-lg-4 card wow fadeInUp" data-wow-delay=".15s">
+                <img src="img/tour-2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Planning for Vacation</h5>
+                  <div class="date">
+                    <p>Sep. 15th</p>
+                    <p>90 <i class="fa-solid fa-comment"></i></p>
+                  </div>
+                  <p class="card-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  <a href="#">Learn More...</a>
+                </div>
+              </div>
+              <div class="col-lg-4 card wow fadeInUp" data-wow-delay=".2s">
+                <img src="img/tour-3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Visit Tokyo Japan</h5>
+                  <div class="date">
+                    <p>Sep. 15th</p>
+                    <p>50 <i class="fa-solid fa-comment"></i></p>
+                  </div>
+                  <p class="card-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  <a href="#">Learn More...</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-blog">
+              <a href="#">SEE ALL POST <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-----------------------------------TESTIMONIAL SETION----------------------------------->
+    <section class="clients">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="title">
+            <h3>Happy Clients</h3>
+          </div>
+          <div class="col-lg-4 testi mb-3 mb-sm-0">
+            <div class="card wow fadeInUp" data-wow-delay=".1s">
+              <div class="card-body">
+                <p class="card-text">“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”</p>
+              </div>
+            </div>
+            <div class="name">
+              <h3>Jhon Doe, CEO</h3>
+              <small>Creative Director</small>
+            </div>
+          </div>
+          <div class="col-lg-4 testi">
+            <div class="card wow fadeInUp" data-wow-delay=".15s">
+              <div class="card-body">
+                <p class="card-text">“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”</p>
+               </div>
+            </div>
+            <div class="name">
+              <h3>Jhon Doe, CEO</h3>
+              <small>Creative Director</small>
+            </div>
+          </div>
+          <div class="col-lg-4 testi">
+            <div class="card wow fadeInUp" data-wow-delay=".2s">
+              <div class="card-body">
+                <p class="card-text">“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”</p>
+              </div>
+            </div>
+            <div class="name">
+              <h3>Jhon Doe, CEO</h3>
+              <small>Creative Director</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-----------------------------------FOOTER SETION----------------------------------->
+    <footer class="map">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="cards">
+          <div class="col-lg-2">
+            <div class="card wow fadeInUp" data-wow-delay=".1s">
+              <div class="card-body">
+                <h5 class="card-title">About Travel</h5>
+                <p class="card-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="card wow fadeInUp" data-wow-delay=".15s">
+              <div class="card-body">
+                <h5 class="card-title">Flights Routes</h5>
+                <div class="text">
+                  <a href="#">Manila flights</a>
+                  <a href="#">Dubai flights</a>
+                  <a href="#">Bangkok flights</a>
+                  <a href="#">Tokyo Flight</a>
+                  <a href="#">New York Flights</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="card wow fadeInUp" data-wow-delay=".2s">
+              <div class="card-body">
+                <h5 class="card-title">Top Hotels</h5>
+                <div class="text">
+                  <a href="#">Boracay Hotel</a>
+                  <a href="#">Dubai Hotel</a>
+                  <a href="#">Singapore Hotel</a>
+                  <a href="#">Manila Hotel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="card wow fadeInUp" data-wow-delay=".25s">
+              <div class="card-body">
+                <h5 class="card-title">Interest</h5>
+                <div class="text">
+                  <a href="#">Beaches</a>
+                  <a href="#">Family Travel</a>
+                  <a href="#">Budget Travel</a>
+                  <a href="#">Food & Drink</a>
+                  <a href="#">Honeymoon and Romance</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="card wow fadeInUp" data-wow-delay=".30s">
+              <div class="card-body">
+                <h5 class="card-title">Best Places</h5>
+                <div class="text">
+                  <a href="#">Boracay Beach</a>
+                  <a href="#">Dubai</a>
+                  <a href="#">Decameron Beach</a>
+                  <a href="#">Singapore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="card wow fadeInUp" data-wow-delay=".35s">
+              <div class="card-body">
+                <h5 class="card-title">Affordable</h5>
+                <div class="text">
+                  <a href="#">Food & Drink</a>
+                  <a href="#">Fare Flights</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="card copy">
+            <div class="card-body">
+              <div class="socials">
+                <a class="social" href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a class="social" href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a class="social" href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a class="social" href="#"><i class="fa-brands fa-pinterest"></i></a>
+                <a class="social" href="#"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+              <!--<ul class="social">
+                <li><a class="first" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+              </ul>-->
+              <p class="card-title">&copy; Copyright <span id="year"></span> | Travel | All Rights Reserved.</p>
+              <p class="card-text">Made with &hearts; by <a href="#">Angelo Dorange</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
